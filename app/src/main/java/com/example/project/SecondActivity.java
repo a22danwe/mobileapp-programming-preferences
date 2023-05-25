@@ -11,15 +11,18 @@ import android.widget.TextView;
 public class SecondActivity extends AppCompatActivity {
     private SharedPreferences myPreferenceRef;
     private SharedPreferences.Editor myPreferenceEditor;
+    EditText newPrefText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
+        myPreferenceRef = getSharedPreferences("MyPreferenceName", MODE_PRIVATE);
+        myPreferenceEditor = myPreferenceRef.edit();
     }
     public void savePref(View v){
         // Get the text
-        EditText newPrefText=new EditText(this);
+        newPrefText=new EditText(this);
         newPrefText=(EditText)findViewById(R.id.settingseditview);
 
         // Store the new preference
@@ -33,5 +36,6 @@ public class SecondActivity extends AppCompatActivity {
 
         // Clear the EditText
         newPrefText.setText("");
+
     }
 }
