@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     Button pressButton;
     private SharedPreferences myPreferenceRef;
     private SharedPreferences.Editor myPreferenceEditor;
+    TextView prefTextRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,14 +37,22 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+    @Override
+        public void onResume() {
+            super.onResume();
 
-    public void onResume() {
-        super.onResume();
+            myPreferenceRef = getSharedPreferences("MyPreferenceName", MODE_PRIVATE);
+            myPreferenceEditor = myPreferenceRef.edit();
 
-        TextView prefTextRef = new TextView(this);
-        prefTextRef=(TextView)
+            prefTextRef =  findViewById(R.id.textView);
 
-        findViewById(R.id.prefText);
+
+
         prefTextRef.setText(myPreferenceRef.getString("MyAppPreferenceString","No preference found."));
-}
+
+
+
+
+    }
+
 }
