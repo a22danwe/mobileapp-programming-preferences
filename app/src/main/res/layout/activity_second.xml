@@ -8,8 +8,8 @@
 
     <EditText
         android:id="@+id/settingseditview"
-        android:layout_width="357dp"
-        android:layout_height="36dp"
+        android:layout_width="370dp"
+        android:layout_height="73dp"
         android:layout_marginBottom="424dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,9 +33,10 @@
 
     <TextView
         android:id="@+id/prefText"
-        android:layout_width="364dp"
-        android:layout_height="14dp"
+        android:layout_width="376dp"
+        android:layout_height="48dp"
         android:layout_below="@+id/prefButton"
+        android:text="Skriv något trevligt tack!"
         app:layout_constraintBottom_toTopOf="@+id/settingseditview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
